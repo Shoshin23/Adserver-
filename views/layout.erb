@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transistional.dtd">
+<html xmls="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	
+  <title><%= @title %></title> <!--Calls the title from the associated .rb file. that's how they work. -->
+<link href="/styles.css" media="screen" rel="stylesheet" type="text/css"> <!--this is the css definition-->
+ 
+</head> 
+  <body>
+	<% if authorized? %> <!--authorized is the method that returns true if the person has entered valid credentials or not, if yes then display the List and New-->
+	<div id="nav">
+		<a href="/list">List</a> | <a href="/new">New</a>
+		</div>
+		<% end %>
+    <%= yield %> <!--run the ruby code!-->
+Copyright © Karthik
+  </body>
+    </html>
